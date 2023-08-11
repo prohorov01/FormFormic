@@ -20,9 +20,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
-  "homepage": "https://prohorov01.github.io/FormFormic",
+  "homepage": "https://prohorov01.github.io/FormFormik",
   "eslintConfig": {
     "extends": [
       "react-app",

@@ -1,5 +1,33 @@
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Field, Form, ErrorMessage, useField } from "formik";
 import * as Yup from "yup";
+
+const MyTextInput = ({ label, ...props }) => {
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <label htmlFor={props.name}>{label}</label>
+      <input {...field} {...props} />
+      {meta.touched && meta.error ? (
+        <div className="error">{meta.error}</div>
+      ) : null}
+    </>
+  );
+};
+
+const MyCheckbox = ({ children, ...props }) => {
+  const [field, meta] = useField({ ...props, type: "checkbox" });
+  return (
+    <>
+      <label className="checkbox">
+        <input type="checkbox" {...field} {...props} />
+        {children}
+      </label>
+      {meta.touched && meta.error ? (
+        <div className="error">{meta.error}</div>
+      ) : null}
+    </>
+  );
+};
 
 const CustomForm = () => {
   return (
@@ -32,13 +60,9 @@ const CustomForm = () => {
     >
       <Form className="form">
         <h2>Send a donation</h2>
-        <label htmlFor="name">Your name</label>
-        <Field id="name" name="name" type="text" />
-        <ErrorMessage className="error" name="name" component="div" />
+        <MyTextInput label="Your name" id="name" name="name" type="text" />
 
-        <label htmlFor="email">Your mail</label>
-        <Field id="email" name="email" type="email" />
-        <ErrorMessage className="error" name="email" component="div" />
+        <MyTextInput label="Your mail" id="email" name="email" type="email" />
 
         <label htmlFor="amount">Quantity</label>
         <Field id="amount" name="amount" type="number" />
@@ -57,11 +81,9 @@ const CustomForm = () => {
         <Field id="text" name="text" as="textarea" />
         <ErrorMessage className="error" name="text" component="div" />
 
-        <label className="checkbox">
-          <Field name="terms" type="checkbox" />
+        <MyCheckbox name="terms">
           Do you agree with the privacy policy?
-        </label>
-        <ErrorMessage className="error" name="terms" component="div" />
+        </MyCheckbox>
 
         <button type="submit">Send</button>
       </Form>

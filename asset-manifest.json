@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/FormFormic/static/css/main.f5fd6a18.chunk.css",
+    "main.js": "/FormFormic/static/js/main.d2b2e3eb.chunk.js",
+    "main.js.map": "/FormFormic/static/js/main.d2b2e3eb.chunk.js.map",
+    "runtime-main.js": "/FormFormic/static/js/runtime-main.f77aed83.js",
+    "runtime-main.js.map": "/FormFormic/static/js/runtime-main.f77aed83.js.map",
+    "static/js/2.3017a70d.chunk.js": "/FormFormic/static/js/2.3017a70d.chunk.js",
+    "static/js/2.3017a70d.chunk.js.map": "/FormFormic/static/js/2.3017a70d.chunk.js.map",
+    "index.html": "/FormFormic/index.html",
+    "static/css/main.f5fd6a18.chunk.css.map": "/FormFormic/static/css/main.f5fd6a18.chunk.css.map",
+    "static/js/2.3017a70d.chunk.js.LICENSE.txt": "/FormFormic/static/js/2.3017a70d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f77aed83.js",
+    "static/js/2.3017a70d.chunk.js",
+    "static/css/main.f5fd6a18.chunk.css",
+    "static/js/main.d2b2e3eb.chunk.js"
+  ]
+}
